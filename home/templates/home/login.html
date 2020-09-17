@@ -1,0 +1,8 @@
+{% extends 'home/base.html' %}
+{% block content %}
+  {% include '_alerts.html' %}
+    <form action="{% url 'home:login' %}" method="POST">
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="Login" value="Login">
+    </form>{% endblock %}
