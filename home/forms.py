@@ -13,3 +13,7 @@ class UserLoginForm(forms.Form):
                                widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}))
     password = forms.CharField(max_length=40,
                                widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}))
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField()
